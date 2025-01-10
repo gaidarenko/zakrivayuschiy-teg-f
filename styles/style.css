@@ -13,4 +13,162 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: 
+    repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px), 
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(#e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
+  background-size: cover;
+}
+
+.header {
+  font-family: PressStart2P;
+  font-weight: 400;
+  border: 2px solid #000;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-transform: uppercase;
+  background-color: #fff;
+}
+
+.header__title {
+  font-size: 49px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header__text {
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.section {
+  width: 100%;
+  max-width: 700px;
+  background-color: #fff;
+  border: 2px solid #000;
+  margin-bottom: 50px;
+}
+
+.section__title {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  padding: 4px 10px 6px 10px;
+}
+
+.section__image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.section__image-label {
+  position: absolute;
+  right: 13px;
+  top: 25px;
+  font-family: PressStart2P;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+}
+
+@supports((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+  .section__image-label {
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
+    text-shadow: none;
+  }
+}
+
+.section__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  mix-blend-mode: hard-light;
+}
+
+.section__text {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 25px;
+}
+
+.section__button {
+  background-color: transparent;
+  color: #000;
+  border: 2px solid #000;
+  padding: 12px 37px;
+  display: block;
+  margin-left: auto;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+
+.button__text {
+  font-family: PressStart2P;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.footer__button {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+  padding: 12px 37px;
+  margin-bottom: 100px;
+}
+
+.dialog {
+  width: 341px;
+  border: 2px solid #000;
+  padding: 30px 42px;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.dialog__button {
+  background-color: transparent;
+  border: 2px solid #000;
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  margin-top: 30px;
+}
+
+.dialog__message {
+  font-family: PressStart2P;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.dialog__icon {
+  display: inline-block;
+  width: 39px;
+  height: 39px;
+}
+
+.dialog__wrapper {
+  display: flex;
+  gap: 18px;
+  align-items: center;
 }
