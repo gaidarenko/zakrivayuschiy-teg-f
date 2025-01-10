@@ -115,9 +115,13 @@
   background-color: transparent;
   color: #000;
   border: 2px solid #000;
-  padding: 12px 37px;
-  display: block;
-  margin-left: auto;
+  padding: 8px 37px;
+}
+
+.section__button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
   margin-right: 25px;
   margin-bottom: 25px;
 }
@@ -134,12 +138,17 @@
   border: 2px solid #000;
   padding: 12px 37px;
   margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 .dialog {
   width: 341px;
   border: 2px solid #000;
-  padding: 30px 42px;
+  padding: 30px 36px;
 }
 
 dialog::backdrop {
@@ -165,9 +174,7 @@ dialog::backdrop {
 }
 
 .dialog__icon {
-  display: inline-block;
-  width: 39px;
-  height: 39px;
+  flex-shrink: 0;
 }
 
 .dialog__wrapper {
@@ -202,4 +209,10 @@ dialog::backdrop {
 
 .filter-sprint-4 {
   filter: hue-rotate(100deg) opacity(0.3);
+}
+
+.card__icon-button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
 }
