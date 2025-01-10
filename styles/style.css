@@ -72,6 +72,8 @@
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
 }
 
 .section__image-label {
@@ -100,11 +102,6 @@
   width: 100%;
   aspect-ratio: 1 / 1;
   mix-blend-mode: hard-light;
-}
-
-.section__image-wrapper {
-  border-top: 2px solid #000;
-  border-bottom: 2px solid #000;
 }
 
 .section__text {
@@ -195,7 +192,7 @@ dialog::backdrop {
   filter: invert(60%);
 }
 
-.filter-sprint-3-start{
+.filter-sprint-3-start {
   filter: sepia(90%);
 }
 
