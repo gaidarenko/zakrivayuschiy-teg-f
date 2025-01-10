@@ -22,6 +22,7 @@
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(#e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
   background-size: cover;
+  font-variation-settings: "wght" 400;
 }
 
 .header {
@@ -101,6 +102,11 @@
   mix-blend-mode: hard-light;
 }
 
+.section__image-wrapper {
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
 .section__text {
   font-family: Inter;
   font-weight: 400;
@@ -171,4 +177,32 @@ dialog::backdrop {
   display: flex;
   gap: 18px;
   align-items: center;
+}
+
+.filter-sprint-1-start {
+  filter: saturate(30%);
+}
+
+.filter-sprint-1-end {
+  filter: brightness(200%);
+}
+
+.filter-sprint-2-start {
+  filter: grayscale(80%);
+}
+
+.filter-sprint-2-end {
+  filter: invert(60%);
+}
+
+.filter-sprint-3-start{
+  filter: sepia(90%);
+}
+
+.filter-sprint-3-end {
+  filter: blur(10px);
+}
+
+.filter-sprint-4 {
+  filter: hue-rotate(100deg) opacity(0.3);
 }
