@@ -32,20 +32,20 @@
   max-width: 700px;
   margin-top: 100px;
   margin-bottom: 100px;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: clamp(120px, 110.7696px + 2.4615vw, 128px); /* 120px; */
+  padding-bottom: clamp(120px, 110.7696px + 2.4615vw, 128px); /* 120px; */
   text-transform: uppercase;
   background-color: var(--bg-color);
 }
 
 .header__title {
-  font-size: 49px;
+  font-size: clamp(49px, 30.5392px + 4.9231vw, 65px);
   text-align: center;
   text-transform: uppercase;
 }
 
 .header__text {
-  font-size: 14px;
+  font-size: clamp(14px, 3.616px + 2.7692vw, 23px);
   text-align: center;
   text-transform: uppercase;
   margin-top: 20px;
@@ -56,14 +56,14 @@
   max-width: 700px;
   background-color: var(--bg-color);
   border: var(--border);
-  margin-bottom: 50px;
+  margin-bottom: 51px;
 }
 
 .section__title {
   font-size: 18px;
   font-variation-settings: "wght" var(--accent-font-weight);
   color: var(--color);
-  padding: 4px 10px 6px 10px;
+  padding: 4px 10px 4px 10px;
 }
 
 .section__image-wrapper {
@@ -76,8 +76,8 @@
 
 .section__image-label {
   position: absolute;
-  right: 13px;
-  top: 25px;
+  right: clamp(11px, -6.3072px + 4.6154vw, 26px);
+  top: 23px;
   font-family: var(--accent-font), fantasy;
   font-weight: var(--main-font-weight);
   font-size: 14px;
@@ -104,14 +104,28 @@
 
 .section__text {
   font-size: 18px;
+  line-height: 21px;
   padding: 25px;
+}
+
+.section__text:nth-of-type(2) {
+  padding-top: 2px;
+}
+
+.section:nth-last-of-type(1) {
+  margin-bottom: 50px;
 }
 
 .section__button {
   background-color: transparent;
   color: var(--color);
   border: var(--border);
-  padding: 8px 37px;
+  padding: 6px 35px;
+}
+
+.like-icon {
+  padding-top: 6px;
+  padding-right: 2px;
 }
 
 .section__button-wrapper {
@@ -128,11 +142,16 @@
   font-size: 14px;
 }
 
+.footer {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
 .footer__button {
   background-color: var(--bg-color);
   color: var(--color);
   border: var(--border);
-  padding: 12px 37px;
+  padding: 14px clamp(10px, 0.7696px + 2.4615vw, 18px);
   margin-bottom: 100px;
   display: flex;
   flex-wrap: wrap;
@@ -171,6 +190,8 @@ dialog::backdrop {
 
 .dialog__icon {
   flex-shrink: 0;
+  width: clamp(40px, 61.9232px - 5.8462vw, 21px);
+  height: clamp(40px, 61.9232px - 5.8462vw, 21px);
 }
 
 .dialog__wrapper {
@@ -211,4 +232,27 @@ dialog::backdrop {
   border: none;
   background-color: transparent;
   padding: 0;
+}
+
+@media (width < 375px) {
+  .header__title {
+    font-size: 40px;
+  }
+
+  .footer {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .dialog {
+    padding: 20px 14px;
+  }
+
+  .dialog__button {
+    margin-top: 20px;
+  }
+
+  .dialog__wrapper {
+    gap: 10px;
+  }
 }
