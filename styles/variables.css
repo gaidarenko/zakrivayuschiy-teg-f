@@ -11,4 +11,7 @@
     --border: 2px solid #000;
     --bg-color: #fff;
     --color: #000;
+    --accent-color: #000;
+    --heart-contour-color: #000;
+    --heart-fill-color: #f00;
 }
