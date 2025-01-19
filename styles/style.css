@@ -178,9 +178,9 @@
 }
 
 .dialog {
-  width: 341px;
+  width: 351px;
   border: var(--border);
-  padding: 30px 36px;
+  padding: 29px 28px;
 }
 
 dialog::backdrop {
@@ -192,8 +192,8 @@ dialog::backdrop {
   border: var(--border);
   display: block;
   width: 100%;
-  padding-top: 10px;
-  padding-bottom: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   margin-top: 30px;
   cursor: pointer;
 }
@@ -208,8 +208,6 @@ dialog::backdrop {
 
 .dialog__icon {
   flex-shrink: 0;
-  width: clamp(21px, 61.9232px - 5.8462vw, 40px);
-  height: clamp(21px, 61.9232px - 5.8462vw, 40px);
 }
 
 .dialog__wrapper {
